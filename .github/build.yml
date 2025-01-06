@@ -1,0 +1,33 @@
+name: TC
+
+on: [workflow_dispatch, pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    env:
+      DEBIAN_FRONTEND: noninteractive
+
+    steps:
+      - name: Update dependencies
+        run: sudo apt-get update
+
+      - name: Install essentials and fonts
+        run: |
+          sudo apt-get install -y texlive-xetex pandoc
+          echo "ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true" | sudo debconf-set-selections
+          sudo apt-get install -y --reinstall ttf-mscorefonts-installer
+          sudo fc-cache -f
+
+      - uses: actions/checkout@v4
+
+      - name: Build PDF
+        run: bash build.sh
+
+      - name: Upload PDF to artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tc
+          path: src/*.pdf
+          if-no-files-found: error
