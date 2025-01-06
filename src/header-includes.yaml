@@ -1,0 +1,11 @@
+---
+geometry: margin=2cm
+header-includes: |
+  \usepackage{amsmath, amssymb, amsthm}
+  \DeclareMathOperator*{\argmax}{arg\,max}
+  \DeclareMathOperator*{\argmin}{arg\,min}
+  \everymath{\displaystyle}
+  \binoppenalty = 10000
+  \relpenalty = 10000
+  \sloppy
+---
