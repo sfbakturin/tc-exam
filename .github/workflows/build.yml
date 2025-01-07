@@ -31,3 +31,4 @@ jobs:
           name: tc
           path: src/*.pdf
           if-no-files-found: error
+          retention-days: 30
