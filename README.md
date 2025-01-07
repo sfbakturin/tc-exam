@@ -2,6 +2,11 @@
 
 Подготовительные билеты к собеседование/экзамену по лекционным материалам курса **Теория кодирования** (7 семестр).
 
+| Build Type        | Status                                                                                                                      |
+|:------------------|:----------------------------------------------------------------------------------------------------------------------------|
+| Push              | [![TC](../../actions/workflows/build.yml/badge.svg?branch=main&event=push)](../../actions/workflows/build.yml)              |
+| Workflow Dispatch | [![TC](../../actions/workflows/build.yml/badge.svg?branch=main&event=workflow_dispatch)](../../actions/workflows/build.yml) |
+
 > [!WARNING]
 > В билетах встречаются ошибки и недосказанности, а также имеются проблемы с согласованностью общего стиля ввиду разного виденья мира разных летописцев.
 
