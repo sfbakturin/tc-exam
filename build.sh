@@ -37,7 +37,7 @@ pandoc "T1.md" \
     "T15.md" \
     "T16.md" \
     "T17.md" \
-    "T18.md" \
+    #"T18.md" \
     "T19.md" \
     "T20.md" \
     "T21.md" \
@@ -50,6 +50,7 @@ pandoc "T1.md" \
     "T28.md" \
     "T29.md" \
     "T30.md" \
+    "T18_old.md" \
     "header-includes.yaml" \
     --pdf-engine=xelatex \
     -V colorlinks=true \
